@@ -1,0 +1,18 @@
+{
+  "name": "librarygp",
+  "version": "1.0.0",
+  "description": "A user library webpage where the user can look up and check out books and create a library card to have a user profile.\r \tThis project uses a books api to draw data on books and uses passport.js to authenticate a user with a card.\r \tThis project also uses less.js to help with css styling.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "sequelize": "^6.28.2"
+  }
+}
