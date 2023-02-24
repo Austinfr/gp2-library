@@ -14,5 +14,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "sequelize": "^6.28.2"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.4"
   }
 }
