@@ -1,8 +1,30 @@
 @background-color: tan;
+@box-background-color: hsl(0, 0%, 80%);
+// @height: 65px;
+// @smaller : @height - 10PX;
+
+
+// header {
+//     height: @height;
+
+// }
+
+// #logo {
+//     height: @smaller;
+// }
+
+.border(@color: #292929) {
+    border: solid 1px @color;
+}
 
 body {
     background-color: @background-color;
 }
 
-// .box {
-//     width: 200px;
+.box {
+    width: 120px;
+    height: 100px;
+    background-color: @box-background-color;
+    .border();
+}
+
