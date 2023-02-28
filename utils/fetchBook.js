@@ -1,8 +1,6 @@
-require('dotenv').config();
-
 let bookSearch = `http://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
-let coversURL = `https://covers.openlibrary.org/b/isbn/`;
+let coversURL = `https://covers.openlibrary.org/b/id/`;
 
 // book description first make api call with search query q={book_title}
 // get the key from that json response of any of the objects in the docs array
@@ -80,22 +78,52 @@ let coversURL = `https://covers.openlibrary.org/b/isbn/`;
 
 
 let searchBooksByTitle = async (title) => {
-    await fetch(bookSearch + `` + title).then(res => {return res.json()})
+    return await fetch(bookSearch + `` + title).then(res => {return res.json()})
     .then(data => {
-        return data;
+        return data.docs[0];
     }).catch(err => {throw err;});
 };
 
 let getBook = async (bookPath) => {
-    await fetch(bookFind + `` + bookPath).then(res => {return res.json();})
+    return await fetch(bookFind + `` + bookPath + `.json`).then(res => {return res.json();})
     .then(data => {
         return data;
     }).catch(err => {throw err;});
 };
 
-let getCoverM = async (isbn) => {
-    await fetch(coversURL + `` + isbn).then(res => {return res.json();})
-    .then(data => {
-        return data;
-    }).catch(err => {throw err;});
+let getCoverURL = (id, size) => {
+    switch(size){
+        case 'small':
+        case 'Small':
+        case 's':
+        case 'S':
+            return coversURL + `` + id + `-S.jpg`;
+        case 'medium':
+        case 'Medium':
+        case 'm':
+        case 'M':
+            return coversURL + `` + id + `-M.jpg`;
+        case 'large':
+        case 'Large':
+        case 'l':
+        case 'L':
+            return coversURL + `` + id + `-L.jpg`;
+    }
+    
 };
+
+//This is a promis that returns an object containing data about a specific book based on the title given
+let getBookAndAuthor = async (title, size) => {
+    let bookData = {};
+    let foundBook = await searchBooksByTitle(title);
+    let bookSpecifics = await getBook(foundBook.key);
+    bookData.title = foundBook.title;
+    bookData.author = foundBook.author_name instanceof Array ? foundBook.author_name.toString() : foundBook.author_name;
+    bookData.description = bookSpecifics.description.split(`\r\n`)[0];
+    //default to medium for now
+    bookData.cover = getCoverURL(bookSpecifics.covers[0], size);
+
+    return bookData;
+}
+
+module.exports = {getBookAndAuthor};
