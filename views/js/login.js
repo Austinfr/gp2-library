@@ -48,3 +48,14 @@ const signupFormHandler = async (event) => {
 };
 
 //addEventListener for submit login form and 1 for signup form
+// change '.login-form' if needed
+document
+  .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);
+// change '.signup-form' if needed
+document
+  .querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
+
+
+  //temporary done
