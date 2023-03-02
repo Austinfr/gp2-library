@@ -1,7 +1,6 @@
 const User = require('./User');
 const Card = require('./Card');
-const Book = require('./Book');
-
+const Books = require('/.Books')
 User.hasOne(Card, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -11,6 +10,7 @@ Card.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Card, Book };
+//Books.
+module.exports = { User, Card, Books};
 
 //needed to double check
