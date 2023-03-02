@@ -1,3 +1,4 @@
+
 [
     {
         "title": "Fahrenheit 451",
@@ -11,8 +12,43 @@
         "description": "\"Full Dark, No Stars\" is a collection of four novellas by Stephen King that delve into the darker side of human nature. The stories explore themes such as murder, revenge, deals with the devil, and the consequences of discovering dark secrets. With its gripping plots and well-drawn characters, this collection is a must-read for fans of horror and suspense."
     },
     {
-        "title": "A Dog's purpose",
+        "title": "A Dog's Purpose",
         "author": "W. Bruce Cameron",
         "description": "Searching for his purpose over the course of multiple canine lives, Bailey is reborn as a golden-haired puppy after a tragic death as a stray and shares a loving bond with young Ethan before he again dies and starts over."
+    },
+    {
+        "title": "The Adventure of Sherlock Holmes",
+        "author": "Arthur Conan Doyle",
+        "description": "The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892. The stories are collected in the same sequence, which is not supported by any fictional chronology. The only characters common to all twelve are Holmes and Dr. Watson and all are related in first-person narrative from Watson's point of view.."
+    },
+    {
+        "title": "Looking for Alaska",
+        "author": "John Green",
+        "description": "Before. Miles \"Pudge\" Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave \"the Great Perhaps\" even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then After. Nothing is ever the same."
+    },
+    {
+        "title": "Paper Towns",
+        "author": "John Green",
+        "description": "One month before graduating from his Central Florida high school, Quentin \"Q\" Jacobsen basks in the predictable boringness of his life until the beautiful and exciting Margo Roth Spiegelman, Q's neighbor and classmate, takes him on a midnight adventure and then mysteriously disappears."
+    },
+    {
+        "title": "The Green Mile",
+        "author": "Stephen King",
+        "description": "When it first appeared, one volume per month, Stephen King's THE GREEN MILE was an unprecedented publishing triumph: all six volumes ended up on the New York Times bestseller lists—simultaneously—and delighted millions of fans the world over."
+    },
+    {
+        "title": "Wonder",
+        "author": "R. J. Palacio",
+        "description": "Ten-year-old Auggie Pullman, who was born with extreme facial abnormalities and was not expected to survive, goes from being home-schooled to entering fifth grade at a private middle school in Manhattan, which entails enduring the taunting and fear of his classmates as he struggles to be seen as just another student."
+    },
+    {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "description": "Kahneman introduces two modes of thought - system 1, fast and intuitive, and system 2, slow and reasoned - and explores how these modes effect behavior, particularly judgement and decision making."
+    },
+    {
+        "title": "The Summer I Turned Pretty Trilogy",
+        "author": "Jenny Han",
+        "description": "Belly has always lived for the summertime, because summer means all her favorite things: swimming, the beach, and the Fischer boys, Conrad and Jeremiah. For as long as she can remember, she's shared her summers with the brothers at Cousins Beach. And for as long as she can remember, she's been in love with Conrad. Then one summer it seems like he might have feelings for her too -- but so does Jeremiah. As the summer seasons pass, Belly has to choose between two brothers who love her ... and she'll have to break one of their hearts."
     }
 ]
