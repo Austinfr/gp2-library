@@ -80,7 +80,7 @@ let coversURL = `https://covers.openlibrary.org/b/id/`;
 let searchBooksByTitle = async (title) => {
     return await fetch(bookSearch + `` + title).then(res => {return res.json()})
     .then(data => {
-        return data.docs[0];
+        return data;
     }).catch(err => {throw err;});
 };
 
@@ -116,9 +116,11 @@ let getCoverURL = (id, size) => {
 let getBookAndAuthor = async (title, size) => {
     let bookData = {};
     let foundBook = await searchBooksByTitle(title);
+    foundBook = foundBook.docs[0];
     let bookSpecifics = await getBook(foundBook.key);
     bookData.title = foundBook.title;
-    bookData.author = foundBook.author_name instanceof Array ? foundBook.author_name.toString() : foundBook.author_name;
+    bookData.author = foundBook.author_name ? foundBook.author_name : foundBook.publisher;
+    bookData.author = bookData.author instanceof Array ? foundBook.author_name.toString() : foundBook.author_name;
     bookData.description = bookSpecifics.description.split(`\r\n`)[0];
     //default to medium for now
     bookData.cover = getCoverURL(bookSpecifics.covers[0], size);
@@ -126,4 +128,19 @@ let getBookAndAuthor = async (title, size) => {
     return bookData;
 }
 
-module.exports = {getBookAndAuthor};
+//This gets length number of books searched with just the title and author
+let getBookListBySearch = async (title, length) => {
+    let bookList = [];
+    let currentBookList = await searchBooksByTitle(title);
+    for(let i = 0; i < length; i++){
+        let currentBookData = {};
+        let currentBook = currentBookList.docs[i];
+        currentBookData.title = currentBook.title;
+        currentBookData.author = currentBook.author_name ? currentBook.author_name : currentBook.publisher;
+        currentBookData.author = currentBookData.author instanceof Array ? currentBookData.author.toString() : currentBook.author;
+        bookList.push(currentBookData);
+    }
+    return bookList;
+}
+
+module.exports = { getBookAndAuthor,  getBookListBySearch };
