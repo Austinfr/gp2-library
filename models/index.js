@@ -1,6 +1,6 @@
 const User = require('./User');
 const Card = require('./Card');
-const Book = require('./Book')
+const Book = require('./Book');
 
 User.hasOne(Card, {
   foreignKey: 'user_id',

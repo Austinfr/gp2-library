@@ -1,18 +1,42 @@
-// Dependencies
-const express = require('express');
-// Import express-handlebars
-const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
 const path = require('path');
+const express = require('express');
+require('dotenv').config();
 
-// Sets up the Express App
+const sequelize = require('./config/connection');
+const routes = require('./controllers');
+const openLibraryApiCall = require('./utils/fetchBook');
+const session = require('express-session');
+const handlebars = require('express-handlebars');
+
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.engine('handlebars', hbs.engine);
+const handles = handlebars.create({ openLibraryApiCall });
+
+const sessionVariable = {
+    secret: 'Super not secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+};
+
+app.use(session(sessionVariable));
+
+app.engine('handlebars', handles.engine);
 app.set('view engine', 'handlebars');
 
-// Starts the server to begin listening
-app.listen(PORT, () => {
-    console.log('Server listening on: http://localhost:' + PORT);
-  });
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log(`App listening on port: ${PORT}`));
+});
+
