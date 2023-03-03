@@ -116,12 +116,18 @@ let getCoverURL = (id, size) => {
 let getBookAndAuthor = async (title, size) => {
     let bookData = {};
     let foundBook = await searchBooksByTitle(title);
-    foundBook = foundBook.docs[0];
-    let bookSpecifics = await getBook(foundBook.key);
+    let bookSpecifics = await getBook(foundBook.docs[0].key);
+    let i = 0;
+    while(bookSpecifics.covers === undefined){
+        bookSpecifics = await getBook(foundBook.docs[i++].key)
+    }
+    foundBook = foundBook.docs[i];
     bookData.title = foundBook.title;
     bookData.author = foundBook.author_name ? foundBook.author_name : foundBook.publisher;
     bookData.author = bookData.author instanceof Array ? foundBook.author_name.toString() : foundBook.author_name;
-    bookData.description = bookSpecifics.description.split(`\r\n`)[0];
+    // if(bookSpecifics.description){
+    //     bookData.description = bookSpecifics.description.split(`\r\n`)[0];
+    // }
     //default to medium for now
     bookData.cover = getCoverURL(bookSpecifics.covers[0], size);
 
@@ -144,3 +150,9 @@ let getBookListBySearch = async (title, length) => {
 }
 
 module.exports = { getBookAndAuthor,  getBookListBySearch };
+
+getBookAndAuthor("Full Dark, No Stars", 'l').then(book => console.log(book));
+getBookAndAuthor("A Dog's Purpose", 'l').then(book => console.log(book));
+getBookAndAuthor("The Adventure of Sherlock Holmes", 'L').then(book => console.log(book));
+getBookAndAuthor("Looking for Alaska", 'l').then(book => console.log(book));
+getBookAndAuthor("Paper Towns", 'l').then(book => console.log(book));

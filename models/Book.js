@@ -1,5 +1,3 @@
-
-
 const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -29,11 +27,9 @@ Book.init(
         },
         vacancy: {
             type: DataTypes.BOOLEAN,
-            allowNull: false,
         },
         ISBN: {
             type: DataTypes.STRING,
-            allowNull: false,
             unique: true,
         },
         publisher: {
