@@ -4,7 +4,7 @@ const { Card } = require('../../models/index');
 
 //get the add library card page
 router.get('/', withAuth, (req, res) => {
-    res.render('newlibrarycard', { login: req.isAuthenticated(), username: req.user.username });
+    res.render('newlibrarycard', { login: req.session.logged_in, username: req.user.username });
 });
 
 //add a new library card

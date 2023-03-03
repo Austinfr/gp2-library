@@ -9,7 +9,7 @@ router.get('/:id', withAuth, async (req, res) => {
             include: [{ model: Author, attributes: ['name'] }]
         });
         const book = bookData.get({ plain: true });
-        res.render('book', { login: req.isAuthenticated(), username: req.user.username, book });
+        res.render('book', { login: req.session.logged_in, username: req.user.username, book });
     } catch (err) {
         res.status(500).send(err.message);
     }
