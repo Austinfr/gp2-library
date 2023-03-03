@@ -119,7 +119,7 @@ let getBookAndAuthor = async (title, size) => {
     let bookSpecifics = await getBook(foundBook.docs[0].key);
     let i = 0;
     while(bookSpecifics.covers === undefined){
-        bookSpecifics = await getBook(foundBook[i++].key)
+        bookSpecifics = await getBook(foundBook.docs[i++].key)
     }
     foundBook = foundBook.docs[i];
     bookData.title = foundBook.title;
