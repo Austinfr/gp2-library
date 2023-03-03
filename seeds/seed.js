@@ -11,7 +11,6 @@ const seedDatabase = async () => {
   
   
   await User.bulkCreate(userData, { individualHooks: true });
-  
   await Book.bulkCreate(bookData);
   await Card.bulkCreate(cardData);
   
