@@ -5,7 +5,7 @@ const checkoutFormHandler = async (event) => {
     const borrowerName = document.querySelector('#borrower-name').value.trim();
   
     if (bookId && borrowerName) {
-      const response = await fetch(`/api/books/${bookId}/checkout`, {
+      const response = await fetch(`/api/book/${bookId}/checkout`, {
         method: 'POST',
         body: JSON.stringify({ borrowerName }),
         headers: {

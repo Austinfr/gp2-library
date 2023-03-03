@@ -1,19 +1,17 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
+const { Card } = require('../models/index');
 
-router.get('/', async (req, res) => {
-    try {
-        res.render('searchpage');   
-    } catch (err) {
-        res.render(err);
-    }
-});
-
-router.get('/:name', async (req, res) => {
-    try {
-        res.render('searchResults', req.params.name);
-    }catch(err){
-        res.render(err);
-    }
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const cardData = await Card.findAll({
+      where: { user_id: req.user.id },
+    });
+    const cards = cardData.map((card) => card.get({ plain: true }));
+    res.render('dashboard', { login: req.isAuthenticated(), username: req.user.username, cards });
+  } catch (err) {
+    res.status(500).json({ message: 'Something went wrong' });
+  }
 });
 
 module.exports = router;
