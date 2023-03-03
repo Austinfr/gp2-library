@@ -1,6 +1,7 @@
 const User = require('./User');
 const Card = require('./Card');
-const Books = require('/.Books')
+const Books = require('./Books');
+
 User.hasOne(Card, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
