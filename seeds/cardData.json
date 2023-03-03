@@ -1,20 +1,23 @@
 [
     {
-        "user_id": 1,
-        "book_id": 1,
-        "borrow_date": "2022-02-15",
-        "return_date": "2022-03-15"
+      "name": "Thuy Bui",
+      "phoneNumber": "555-555-1234",
+      "barcodeNumber": "1234567890"
     },
     {
-        "user_id": 2,
-        "book_id": 3,
-        "borrow_date": "2022-02-20",
-        "return_date": "2022-03-20"
+      "name": "Kevin Lang",
+      "phoneNumber": "555-555-5678",
+      "barcodeNumber": "0987654321"
     },
     {
-        "user_id": 3,
-        "book_id": 2,
-        "borrow_date": "2022-03-01",
-        "return_date": "2022-04-01"
-    }
-]
+      "name": "Austin Howell",
+      "phoneNumber": "555-555-9876",
+      "barcodeNumber": "4567890123"
+    },
+    {
+        "name": "Lilly Ruiz",
+        "phoneNumber": "555-555-9876",
+        "barcodeNumber": "0165751258"
+      }
+  ]
+  
