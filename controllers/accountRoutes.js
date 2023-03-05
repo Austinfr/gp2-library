@@ -5,7 +5,7 @@ const { User } = require('../models');
 router.get('/', withAuth, async (req, res) => {
     try{
         const currentUser = await User.findByPk();
-        res.render('accountpage');
+        res.render('dashboard');
     }catch(err){
         res.render(err);
     }
