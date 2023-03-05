@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 let bookSearch = `http://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
 let coversURL = `https://covers.openlibrary.org/b/id/`;

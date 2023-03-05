@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
             // if succesful, will direct the browser to the main page. 
-            document.location.replace('/main');
+            document.location.replace('/search');
         }
         else {
             alert('response.statusText');
