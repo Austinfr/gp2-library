@@ -112,7 +112,7 @@ let getCoverURL = (id, size) => {
     
 };
 
-//This is a promis that returns an object containing data about a specific book based on the title given
+//This is a promise that returns an object containing data about a specific book based on the title given
 let getBookAndAuthor = async (title, size) => {
     let bookData = {};
     let foundBook = await searchBooksByTitle(title);
