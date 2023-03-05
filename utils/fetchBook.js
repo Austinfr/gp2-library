@@ -169,8 +169,8 @@ let getBookListBySearch = async (title, length) => {
 
 module.exports = { getBookAndAuthor,  getBookListBySearch };
 
-getBookAndAuthor("Full Dark, No Stars", 'l').then(book => console.log(book));
-getBookAndAuthor("A Dog's Purpose", 'l').then(book => console.log(book));
-getBookAndAuthor("The Adventure of Sherlock Holmes", 'L').then(book => console.log(book));
-getBookAndAuthor("Looking for Alaska", 'l').then(book => console.log(book));
-getBookAndAuthor("Paper Towns", 'l').then(book => console.log(book));
+// getBookAndAuthor("Full Dark, No Stars", 'l').then(book => console.log(book));
+// getBookAndAuthor("A Dog's Purpose", 'l').then(book => console.log(book));
+// getBookAndAuthor("The Adventure of Sherlock Holmes", 'L').then(book => console.log(book));
+// getBookAndAuthor("Looking for Alaska", 'l').then(book => console.log(book));
+// getBookAndAuthor("Paper Towns", 'l').then(book => console.log(book));
