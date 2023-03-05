@@ -118,17 +118,35 @@ let getBookAndAuthor = async (title, size) => {
     let foundBook = await searchBooksByTitle(title);
     let bookSpecifics = await getBook(foundBook.docs[0].key);
     let i = 0;
+
+    //The search is based on relavency to query not the popularity
+    //so this checks for a cover so that we know it's probably the one we're looking for
     while(bookSpecifics.covers === undefined){
         bookSpecifics = await getBook(foundBook.docs[i++].key)
     }
+
     foundBook = foundBook.docs[i];
     bookData.title = foundBook.title;
-    bookData.author = foundBook.author_name ? foundBook.author_name : foundBook.publisher;
-    bookData.author = bookData.author instanceof Array ? foundBook.author_name.toString() : foundBook.author_name;
-    // if(bookSpecifics.description){
-    //     bookData.description = bookSpecifics.description.split(`\r\n`)[0];
-    // }
-    //default to medium for now
+
+    //changed the author and publisher logic so that it's better for a wide selection of books
+    if(foundBook.author_name){
+        bookData.author = foundBook.author_name;
+    }else{
+        bookData.publisher = foundBook.publisher;
+    }
+
+    if(bookData.author){
+        bookData.author = bookData.author instanceof Array ? bookData.author.toString() : bookData.author;
+    }else{
+        bookData.publisher = bookData.publisher instanceof Array ? bookData.publisher.toString() : bookData.publisher;
+    }
+    
+    //if there is a description we try to parse the first bit of description so the whole book isn't given away
+    if(bookSpecifics.description){
+        bookData.description = bookSpecifics.description.split(`\r\n`)[0];
+    }
+
+    //gets the cover and stores it in the proper url format
     bookData.cover = getCoverURL(bookSpecifics.covers[0], size);
 
     return bookData;
