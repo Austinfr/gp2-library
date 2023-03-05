@@ -1,5 +1,5 @@
 
-    {{#each Book as |BOOK|}}
+    {{#each Book.init as |book|}}
     
 <div class="container ">
     <div class="row g-3 ">
@@ -8,16 +8,15 @@
           <!-- ADDED IMAGE OF BOOK -->
           <img src="..." class="card-img-top" alt="..."> 
           <div class="card-body">
-            {{!-- Need to add Book name and description --}}
-            {{!-- <h5 class="card-title">{{BOOK}}</h5>
-            <p class="card-text">{{bookdescription}}</p> --}}
+            <h5 class="card-title">{{book.title}}</h5>
+            <p class="card-text">{{book.description}}</p>
           </div>
         </div>
       </div>
 
       {{/each}}
 
-      
+
        {{!-- 
       <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
