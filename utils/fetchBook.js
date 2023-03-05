@@ -1,6 +1,8 @@
+
 let bookSearch = `http://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
 let coversURL = `https://covers.openlibrary.org/b/id/`;
+const fetch = require("node-fetch");
 
 // book description first make api call with search query q={book_title}
 // get the key from that json response of any of the objects in the docs array
