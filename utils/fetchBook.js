@@ -1,6 +1,8 @@
+
 let bookSearch = `http://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
 let coversURL = `https://covers.openlibrary.org/b/id/`;
+const fetch = require("node-fetch");
 
 // book description first make api call with search query q={book_title}
 // get the key from that json response of any of the objects in the docs array
@@ -169,8 +171,8 @@ let getBookListBySearch = async (title, length) => {
 
 module.exports = { getBookAndAuthor,  getBookListBySearch };
 
-getBookAndAuthor("Full Dark, No Stars", 'l').then(book => console.log(book));
-getBookAndAuthor("A Dog's Purpose", 'l').then(book => console.log(book));
-getBookAndAuthor("The Adventure of Sherlock Holmes", 'L').then(book => console.log(book));
-getBookAndAuthor("Looking for Alaska", 'l').then(book => console.log(book));
-getBookAndAuthor("Paper Towns", 'l').then(book => console.log(book));
+// getBookAndAuthor("Full Dark, No Stars", 'l').then(book => console.log(book));
+// getBookAndAuthor("A Dog's Purpose", 'l').then(book => console.log(book));
+// getBookAndAuthor("The Adventure of Sherlock Holmes", 'L').then(book => console.log(book));
+// getBookAndAuthor("Looking for Alaska", 'l').then(book => console.log(book));
+// getBookAndAuthor("Paper Towns", 'l').then(book => console.log(book));
