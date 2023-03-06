@@ -12,8 +12,11 @@ router.get('/', withAuth, async (req, res) => {
     }
 
 });
-router.get('/signup', async (re, res) =>{
+router.get('/signup', async (req, res) =>{
     res.render('signup')
+});
+router.get('/login', async (req, res) =>{
+    res.render('login')
 });
 router.get('/login', async (req, res) => {
     if(req.session.loggedIn){
