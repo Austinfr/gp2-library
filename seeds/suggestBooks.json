@@ -9,13 +9,15 @@
     {
         "title": "Full Dark, No Stars",
         "author": "Stephen King",
-        "description": "\"Full Dark, No Stars\" is a collection of four novellas by Stephen King that delve into the darker side of human nature. The stories explore themes such as murder, revenge, deals with the devil, and the consequences of discovering dark secrets. With its gripping plots and well-drawn characters, this collection is a must-read for fans of horror and suspense."
+        "description": "\"Full Dark, No Stars\" is a collection of four novellas by Stephen King that delve into the darker side of human nature. The stories explore themes such as murder, revenge, deals with the devil, and the consequences of discovering dark secrets. With its gripping plots and well-drawn characters, this collection is a must-read for fans of horror and suspense.",
+        "borrowed_by": 1
     },
     {
         "title": "A Dog's Purpose",
         "author": "W. Bruce Cameron",
         "description": "Searching for his purpose over the course of multiple canine lives, Bailey is reborn as a golden-haired puppy after a tragic death as a stray and shares a loving bond with young Ethan before he again dies and starts over.",
-        "image": "https://covers.openlibrary.org/b/id/8750145-L.jpg"
+        "image": "https://covers.openlibrary.org/b/id/8750145-L.jpg",
+        "borrowed_by": 3
     },
     {
         "title": "The Adventure of Sherlock Holmes",
@@ -26,7 +28,8 @@
         "title": "Looking for Alaska",
         "author": "John Green",
         "description": "Before. Miles \"Pudge\" Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave \"the Great Perhaps\" even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then After. Nothing is ever the same.",
-        "image": "https://covers.openlibrary.org/b/id/12614602-L.jpg"
+        "image": "https://covers.openlibrary.org/b/id/12614602-L.jpg",
+        "borrowed_by": 2
     },
     {
         "title": "Paper Towns",
@@ -36,7 +39,8 @@
     {
         "title": "The Green Mile",
         "author": "Stephen King",
-        "description": "When it first appeared, one volume per month, Stephen King's THE GREEN MILE was an unprecedented publishing triumph: all six volumes ended up on the New York Times bestseller lists—simultaneously—and delighted millions of fans the world over."
+        "description": "When it first appeared, one volume per month, Stephen King's THE GREEN MILE was an unprecedented publishing triumph: all six volumes ended up on the New York Times bestseller lists—simultaneously—and delighted millions of fans the world over.",
+        "borrowed_by": 4
     },
     {
         "title": "Wonder",

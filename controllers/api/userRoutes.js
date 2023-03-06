@@ -1,4 +1,3 @@
-
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User } = require('../../models');
@@ -47,16 +46,16 @@ router.post('/login', async (req, res, next) => {
 });
 
 router.get('/logout', (req, res, next) => {
+    console.log("WWWW");
     if (req.session.logged_in) {
         // Remove the session variables
         req.session.destroy(() => {
           res.status(204).end();
         });
-        console.log(req.session);
         res.redirect('/login');
-      } else {
+    } else {
         res.status(404).end();
-      }
+    }
 });
 
 module.exports = router;

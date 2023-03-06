@@ -1,8 +1,7 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
 const { User, Book } = require('../models');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try{
         const currentUser = await User.findByPk(req.session.user_id);
         const checkedOutBooks = await Book.findAll({
@@ -10,8 +9,7 @@ router.get('/', withAuth, async (req, res) => {
                 borrowed_by: currentUser.id
             }
         });
-        
-        res.render('account');
+        res.render('account', checkedOutBooks);
     }catch(err){
         res.render(err);
     }

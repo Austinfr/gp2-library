@@ -6,7 +6,6 @@ const passport = require('passport');
 require('./utils/passport');
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
-const openLibraryApiCall = require('./utils/fetchBook');
 const session = require('express-session');
 const handlebars = require('express-handlebars');
 
@@ -16,7 +15,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const handles = handlebars.create({ openLibraryApiCall });
+const handles = handlebars.create();
 
 const sessionVariable = {
     secret: 'Super not secret secret',
@@ -41,7 +40,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
-
 
 app.get('/protected', 
   passport.authenticate('local', { failureRedirect: '/login' }), 

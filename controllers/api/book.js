@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const { Op } = require('sequelize');
-const withAuth = require('../../utils/auth');
 const { Book } = require('../../models/index');
 
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const bookData = await Book.findByPk(req.params.id, {
             include: [{ attributes: ['name'] }]
@@ -15,7 +14,7 @@ router.get('/:id', withAuth, async (req, res) => {
     }
 });
 
-router.post('/:id/checkout', withAuth, async (req, res) => {
+router.post('/:id/checkout', async (req, res) => {
     try {
         const book_id = req.params.id;
         await Book.update({
@@ -34,7 +33,7 @@ router.post('/:id/checkout', withAuth, async (req, res) => {
     }
 });
 
-router.post('/:id/return', withAuth, async (req, res) => {
+router.post('/:id/return', async (req, res) => {
     try {
         const book_id = req.params.id;
         await Book.update({
