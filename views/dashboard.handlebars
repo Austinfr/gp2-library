@@ -1,7 +1,8 @@
 <div>
     {{!-- add handbar for user information --}}
+    <div>This is the dashboard page</div>
     <ul>
-    {{#each book}}
+    {{#each books as |book|}}
         <li>{{title}} written by: {{author}}</li>
     {{/each}}
     </ul>
