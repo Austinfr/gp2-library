@@ -6,7 +6,7 @@ const logout = async () => {
 
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/login');
     } else {
         alert(response.statusText);
     }
@@ -15,6 +15,3 @@ const logout = async () => {
 //addEventlistener for logout 
 // change #logout if needed
 document.querySelector('#logout').addEventListener('click', logout);
-
-
-//temp done

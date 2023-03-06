@@ -12,13 +12,12 @@ const loginFormHandler = async (event) => {
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
-
         if (response.ok) {
             // if succesful, will direct the browser to the main page. 
-            document.location.replace('/main');
-        }
-        else {
-            alert('response.statusText');
+            document.location.replace('/');
+        } else {
+          console.log(response)
+            alert(response.statusText);
         }
     }
 };
@@ -39,7 +38,7 @@ const signupFormHandler = async (event) => {
           });
       // if succesful, will direct the browser to the main page. 
           if (response.ok) {
-            document.location.replace('/main');
+            document.location.replace('/');
           } else {
             alert(response.statusText);
           }
@@ -49,13 +48,17 @@ const signupFormHandler = async (event) => {
 
 //addEventListener for submit login form and 1 for signup form
 // change '.login-form' if needed
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+if(document.location.pathname === '/login'){
+  document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
+}
+if(document.location.pathname === '/signup'){
 // change '.signup-form' if needed
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+  document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
+}
 
 
   //temporary done
