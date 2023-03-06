@@ -1,3 +1,8 @@
 h1{ 
     font-family: tilt prism;
+    color: antiquewhite;
+}
+button{
+    padding: 5%;
+    margin: 2%;
 }
