@@ -40,8 +40,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new LocalStrategy(
-    function(username, password, done) {
-        // your authentication logic here
+    function verify(username, password, done) {
+        sequelize
     }
 ));
 
