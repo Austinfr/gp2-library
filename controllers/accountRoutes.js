@@ -4,7 +4,7 @@ const { User } = require('../models');
 
 router.get('/', withAuth, async (req, res) => {
     try{
-        const currentUser = await User.findByPk();
+        const currentUser = await User.findByPk(req.session.id);
         res.render('dashboard');
     }catch(err){
         res.render(err);

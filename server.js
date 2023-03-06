@@ -37,6 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
@@ -53,3 +54,9 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 module.exports = app;
+
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log(`App listening on port: ${PORT}`));
+
