@@ -46,4 +46,20 @@ const newFormHandler = async (event) => {
 //   document
 //     .querySelector('.book-list')
 //     .addEventListener('click', delButtonHandler);
+
+document.querySelector('.search-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const input = document.querySelector('#search-input').value.trim;
+
+  if(input){
+    const response = await fetch(`/search/${input}`);
+
+    if(response.ok){
+      
+    }
+  }
+
+
+});
   
