@@ -4,11 +4,11 @@
   <thead>
   <tbody>
     <tr>
-      {{#each books}}
+      {{#each books as |book|}}
       <div class="book">
-        <h2>{{title}}</h2>
-        <p>{{author}}</p>
-        <p>{{description}}</p>
+        <h2>{{book.title}}</h2>
+        <p>{{book.author}}</p>
+        <p>{{book.description}}</p>
       </div>
       {{/each}}
     </tr>
