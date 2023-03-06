@@ -12,10 +12,9 @@ const loginFormHandler = async (event) => {
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
-
         if (response.ok) {
             // if succesful, will direct the browser to the main page. 
-            document.location.replace('/main');
+            document.location.replace('/');
         } else {
             alert('response.statusText');
         }
@@ -38,7 +37,7 @@ const signupFormHandler = async (event) => {
           });
       // if succesful, will direct the browser to the main page. 
           if (response.ok) {
-            document.location.replace('/main');
+            document.location.replace('/');
           } else {
             alert(response.statusText);
           }

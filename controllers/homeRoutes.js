@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Book, Card, User } = require('../models');
+const { Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
         const books = await Book.findAll();
-        res.render('search', { books });
+        res.render('dashboard', { books });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -14,9 +14,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/signup', async (req, res) =>{
     res.render('signup')
 });
-router.get('/login', async (req, res) =>{
-    res.render('login')
-});
+
 router.get('/login', async (req, res) => {
     if(req.session.loggedIn){
         res.redirect('/');
