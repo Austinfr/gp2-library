@@ -7,7 +7,7 @@ const cartRoutes = require('./cartRoutes');
 const accountRoutes = require('./accountRoutes');
 
 router.use('/', homeRoutes);
-router.use('/search', mainRoutes);
+router.use('/main', mainRoutes);
 router.use('/cart', cartRoutes);
 router.use('/account', accountRoutes);
 router.use('/api', apiRoutes);

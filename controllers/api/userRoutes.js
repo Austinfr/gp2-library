@@ -9,7 +9,7 @@ router.post('/', async (req, res, next) => {
         const newUser = newUserData.get({ plain: true });
         req.login(newUser, err => {
             if (err) { return next(err); }
-            res.redirect('/homeRoutes');
+            res.redirect('/');
         });
     } catch (err) {
         res.status(400).send(err.errors.map(e => e.message));
@@ -17,7 +17,7 @@ router.post('/', async (req, res, next) => {
 });
 
 router.post('/login', passport.authenticate('local', {
-    successReturnToOrRedirect: '/homeRoutes',
+    successReturnToOrRedirect: '/main',
     failureRedirect: '/login'
 }));
 
