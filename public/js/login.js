@@ -15,9 +15,8 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
             // if succesful, will direct the browser to the main page. 
-            document.location.replace('/search');
-        }
-        else {
+            document.location.replace('/main');
+        } else {
             alert('response.statusText');
         }
     }
@@ -49,13 +48,17 @@ const signupFormHandler = async (event) => {
 
 //addEventListener for submit login form and 1 for signup form
 // change '.login-form' if needed
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+if(document.location.pathname === '/login'){
+  document
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
+}
+if(document.location.pathname === '/signup'){
 // change '.signup-form' if needed
-document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+  document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
+}
 
 
   //temporary done

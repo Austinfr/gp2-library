@@ -1,4 +1,3 @@
-
 const router = require('express').Router();
 const { Book, Card, User } = require('../models');
 const withAuth = require('../utils/auth');
@@ -11,6 +10,10 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 
+});
+
+router.get('/signup', async (req, res) => {
+    res.render('signup');
 });
 
 router.get('/login', async (req, res) => {

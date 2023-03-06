@@ -7,6 +7,7 @@ const routes = require('./controllers');
 const openLibraryApiCall = require('./utils/fetchBook');
 const session = require('express-session');
 const handlebars = require('express-handlebars');
+const passport = require('passport');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -33,6 +34,9 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(routes);
 
