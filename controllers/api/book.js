@@ -27,6 +27,7 @@ router.post('/:id/checkout', withAuth, async (req, res) => {
                 id: book_id 
             }
         });
+
         res.redirect('search', { message: 'The book has been checked out successfully.' });
     } catch (err) {
         res.status(500).send({ message: err });

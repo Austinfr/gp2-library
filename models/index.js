@@ -11,4 +11,3 @@ Book.belongsTo(User, {
 });
 module.exports = { User, Book};
 
-//needed to double check

@@ -1,9 +1,18 @@
-<div>
-    {{!-- add handbar for user information --}}
-    <div>This is the dashboard page</div>
-    <ul>
-    {{#each bookarr as |book|}}
-        <li>{{title}} written by: {{author}}</li>
-    {{/each}}
-    </ul>
-</div>
+
+<h1>Library Dashboard</h1>
+<table>
+  <thead>
+  <tbody>
+    <tr>
+      {{#each books}}
+      <div class="book">
+        <h2>{{title}}</h2>
+        <p>{{author}}</p>
+        <p>{{description}}</p>
+      </div>
+      {{/each}}
+    </tr>
+  </tbody>
+  </thead>
+</table>
+
