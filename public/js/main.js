@@ -50,14 +50,18 @@ const newFormHandler = async (event) => {
 document.querySelector('.search-form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const input = document.querySelector('#search-input').value.trim;
+  const input = document.querySelector('#search-input').value.trim();
 
   if(input){
-    const response = await fetch(`/search/${input}`);
+    const response = await fetch(`/search/${input}`, {
+      method: 'GET'
+    });
 
     if(response.ok){
-      
+
     }
+  }else if(input === ''){
+    document.location.replace('/search');
   }
 
 

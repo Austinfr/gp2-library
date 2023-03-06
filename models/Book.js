@@ -22,12 +22,6 @@ Book.init(
         description: {
             type: DataTypes.TEXT,
         },
-        contact_info: {
-            type: DataTypes.STRING,
-        },
-        vacancy: {
-            type: DataTypes.BOOLEAN,
-        },
         ISBN: {
             type: DataTypes.STRING,
             unique: true,
@@ -41,6 +35,9 @@ Book.init(
                 model: "user",
                 key: "id"
             }
+        },
+        borrowed_date: {
+            type: DataTypes.DATE,
         }
     },
     {
