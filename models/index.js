@@ -18,7 +18,7 @@ User.hasMany(Book, {
 
 Book.belongsTo(User, {
   foreignKey: 'borrowed_by'
-})
+});
 module.exports = { User, Card, Book};
 
 //needed to double check
