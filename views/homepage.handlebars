@@ -1,14 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comfy Reads</title>
-    <link rel="stylesheet/less" type="text/css" href="css/login.less"/>
-    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
-</head>
-<body>
-    <h1>Hello world!</h1>
-</body>
-</html>
+<div class='menu-container'>
+  <div class='card-header col-md-10'>
+    <h2>
+      &#127869 Current Library
+    </h2>
+  </div>
+  {{#each book as |book|}}
+    <div class='book col-md-5'>
+      <p>
+        {{book.id}}.
+        {{book.book_name}}
+      </p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        Name:
+        {{user_name}}
+        {{}} 
+      </p>
+    </div>
+  {{/each}}
+  <div class='add-book-container'>
+    <h2>
+      Save you book!
+    </h2>
+    <form class='new-book-form'>
+      <label for='book_name'>
+        Book Name:
+      </label>
+      <br />
+      <textarea id='book_name' name='book_name' rows='2' cols='30'>
+        {{book_name}}
+      </textarea>
+      <br />
+      <label for='description'>
+        Description:
+      </label>
+      <br />
+      <textarea id='description' name='description' rows='5' cols='30'>
+        {{description}}
+      </textarea>
+      <br />
+      <label for='user_name'>
+        User Name:
+      </label>
+      <br />
+      <textarea id='user_name' name='user_name' rows='2' cols='30'>
+        {{user_name}}
+      </textarea>
+      <br />
+      <br />
+      <button type='submit' value='Submit'>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+<!-- This is the form for Checking???? --> 
+{{!-- ADDED JS --}}
+
+
+<script src='/js/></script>
