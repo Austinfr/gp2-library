@@ -23,7 +23,7 @@ router.post('/:id/checkout', withAuth, async (req, res) => {
         }, {
             where: { id: book_id }
         });
-        res.redirect('/cart-routes', { message: 'The book has been checked out successfully.' });
+        res.redirect('/account', { message: 'The book has been checked out successfully.' });
     } catch (err) {
         res.status(500).send({ message: err });
     }
@@ -37,7 +37,7 @@ router.post('/:id/return', withAuth, async (req, res) => {
         }, {
             where: { id: book_id }
         });
-        res.redirect('/cart-routes', { message: 'The book has been returned successfully.' });
+        res.redirect('/account', { message: 'The book has been returned successfully.' });
     } catch (err) {
         res.status(500).send({ message: err });
     }

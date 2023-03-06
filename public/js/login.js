@@ -16,6 +16,7 @@ const loginFormHandler = async (event) => {
             // if succesful, will direct the browser to the main page. 
             document.location.replace('/');
         } else {
+          console.log(response)
             alert(response.statusText);
         }
     }

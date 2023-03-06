@@ -38,10 +38,10 @@ const newFormHandler = async (event) => {
 //     }
 //   };
   
-  document
-    .querySelector('.new-book-form')
-    // change the id 'submit'/search if needed 
-    .addEventListener('submit', newFormHandler);
+  // document
+  //   .querySelector('.new-book-form')
+  //   // change the id 'submit'/search if needed 
+  //   .addEventListener('submit', newFormHandler);
   
 //   document
 //     .querySelector('.book-list')
