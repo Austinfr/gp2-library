@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 const { User, Book } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try{
         const currentUser = await User.findByPk(req.session.user_id);
         const checkedOutBooks = await Book.findAll({

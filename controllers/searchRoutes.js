@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 router.get('/:name', async (req, res) => {
     try{
       //this will get the result of the request giving the title an author but does not redirect or display
-      bookSearch.getBookListBySearch(req.params.name, 20).then(result => {
+      await bookSearch.getBookListBySearch(req.params.name, 20).then(result => {
         res.render('results', result);
       });
       
