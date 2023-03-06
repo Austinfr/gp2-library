@@ -1,10 +1,12 @@
 
 <h1>Library Dashboard</h1>
+{{log books}}
+{{!-- {{log bookarr}} --}}
 <table>
   <thead>
   <tbody>
     <tr>
-      {{#each books as |book|}}
+      {{#each bookarr as |book|}}
       <div class="book">
         <h2>{{book.title}}</h2>
         <p>{{book.author}}</p>

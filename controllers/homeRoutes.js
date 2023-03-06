@@ -4,11 +4,20 @@ const { Book } = require('../models');
 router.get('/', async (req, res) => {
     try {
         const bookList = await Book.findAll();
-        let bookarr = [];
-        for(let book of bookList){
-            bookarr.push({title: book.dataValues.title, author: book.dataValues.author, description: book.dataValues.description});
-        }
-        res.render('dashboard', bookarr);
+        // let tony = bookList.map(jery => {
+        //     return jery.get({plain:true})
+        // })
+        // console.log(tony)
+
+        // let bookarr = [];
+        // for(let book of bookList){
+        //     bookarr.push({title: book.dataValues.title, author: book.dataValues.author, description: book.dataValues.description});
+        // }
+        const bookarr = bookList.map((book) => book.get({plain: true}));
+        console.log(bookarr)
+        res.render('dashboard', {
+            bookarr
+        });
     } catch (err) {
         res.status(500).json(err);
     }

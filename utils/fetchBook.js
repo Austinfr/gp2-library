@@ -1,21 +1,52 @@
-let bookSearch = `http://openlibrary.org/search.json?q=`;
+let bookSearch = `https://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
 let coversURL = `https://covers.openlibrary.org/b/id/`;
+const axios = require('axios');
+
+// let searchBooksByTitle = async (title) => {
+//     console.log(bookSearch + `` + title)
+//     return await fetch(bookSearch + `` + title).then(res => {
+//         console.log(res)
+//         return res.json()})
+//     .then(data => {
+//         console.log(data)
+//         return data;
+//     }).catch(err => {throw err;});
+// };
+
+// let getBook = async (bookPath) => {
+//     return await fetch(bookFind + `` + bookPath + `.json`).then(res => {return res.json();})
+//     .then(data => {
+//         return data;
+//     }).catch(err => {throw err;});
+// };
+// console.log(searchBooksByTitle("LOTR"))
+
 
 let searchBooksByTitle = async (title) => {
-    return await fetch(bookSearch + `` + title).then(res => {return res.json()})
-    .then(data => {
-        return data;
-    }).catch(err => {throw err;});
-};
-
-let getBook = async (bookPath) => {
-    return await fetch(bookFind + `` + bookPath + `.json`).then(res => {return res.json();})
-    .then(data => {
-        return data;
-    }).catch(err => {throw err;});
-};
-
+    console.log(bookSearch + '' + title);
+    try {
+      const response = await axios.get(bookSearch + '' + title);
+      console.log(response);
+      return response.data;
+    } catch (err) {
+      throw err;
+    } finally {
+      console.log('Request finished.');
+    }
+  };
+  
+  let getBook = async (bookPath) => {
+    try {
+      const response = await axios.get(bookFind + '' + bookPath + '.json');
+      return response.data;
+    } catch (err) {
+      throw err;
+    } finally {
+      console.log('Request finished.');
+    }
+  };
+  
 // to get the cover of the book call or reference https://covers.openlibrary.org/b/isbn/9780385533225-S.jpg
 // with -S, -M or -L for small, medium, large images with the isbn of the book
 let getCoverURL = (id, size) => {
