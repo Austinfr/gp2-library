@@ -38,6 +38,7 @@ Book.init(
         },
         borrowed_date: {
             type: DataTypes.DATE,
+            defaultValue:DataTypes.NOW,
         }
     },
     {
