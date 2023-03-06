@@ -4,8 +4,12 @@ const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        const books = await Book.findAll();
-        res.render('dashboard', { books });
+        const bookList = await Book.findAll();
+        let bookarr = [];
+        for(let book of bookList){
+            bookarr.push({title: book.dataValues.title, author: book.dataValues.author});
+        }
+        res.render('dashboard', bookarr);
     } catch (err) {
         res.status(500).json(err);
     }
