@@ -1,8 +1,6 @@
-
 let bookSearch = `http://openlibrary.org/search.json?q=`;
 let bookFind = `http://openlibrary.org`;
 let coversURL = `https://covers.openlibrary.org/b/id/`;
-const fetch = require("node-fetch");
 
 // book description first make api call with search query q={book_title}
 // get the key from that json response of any of the objects in the docs array
@@ -93,6 +91,8 @@ let getBook = async (bookPath) => {
     }).catch(err => {throw err;});
 };
 
+// to get the cover of the book call or reference https://covers.openlibrary.org/b/isbn/9780385533225-S.jpg
+// with -S, -M or -L for small, medium, large images with the isbn of the book
 let getCoverURL = (id, size) => {
     switch(size){
         case 'small':
@@ -144,8 +144,11 @@ let getBookAndAuthor = async (title, size) => {
     }
     
     //if there is a description we try to parse the first bit of description so the whole book isn't given away
-    if(bookSpecifics.description){
-        bookData.description = bookSpecifics.description.split(`\r\n`)[0];
+    //sometimes the description will be an object with a type and value elements
+    if(bookSpecifics.description instanceof Object){
+        bookData.description = bookSpecifics.description.value.includes(`\r\n`) ? bookSpecifics.description.value.split(`\r\n`)[0] : bookSpecifics.description.value;
+    }else if(bookSpecifics.description){
+        bookData.description = bookSpecifics.description.includes(`\r\n`) ? bookSpecifics.description.split(`\r\n`)[0] : bookSpecifics.description;
     }
 
     //gets the cover and stores it in the proper url format
