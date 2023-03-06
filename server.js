@@ -49,9 +49,9 @@ app.get('/protected',
     res.send('You have successfully authenticated!');
 });
 
-app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`App listening on port: ${PORT}`));
-
 });
+
+
 
