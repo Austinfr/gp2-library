@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
 router.get('/:name', async (req, res) => {
     try{
       const bookList = bookSearch.getBookListBySearch(req.params.name);
+      console.log(bookList);
       res.render('results', bookList);
 
     } catch(err){
