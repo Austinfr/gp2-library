@@ -33,3 +33,9 @@ button{
     margin: 2%;
     border-radius: 25px;
 }
+
+img{
+    border-radius: 15px;
+    width: 600px; height: 450px; 
+    object-fit: cover;
+}
