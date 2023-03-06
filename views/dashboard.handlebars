@@ -1,4 +1,8 @@
 <div>
     {{!-- add handbar for user information --}}
-    {{}}
+    <ul>
+    {{#each book}}
+        <li>{{title}} written by: {{author}}</li>
+    {{/each}}
+    </ul>
 </div>
