@@ -24,7 +24,11 @@ background-color: tan;
     border-radius: 35px;
     background-color: #fff;
 }
+.image-content,
+.card-content{
+    padding: 3px;
 
+} 
 .card-image{
     position: relative;
     height: 150px;
