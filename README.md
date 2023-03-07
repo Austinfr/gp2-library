@@ -12,15 +12,14 @@ Comfy reads in an online digital library that allows users to create an account 
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [Our process](#out-process)
+- [Our process](#our-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [What we learned](#what-we-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Authors](#authors)
+- [new Tech](#new-Tech)
+- [Repo](#Repo)
 
 ## Overview
 
@@ -33,7 +32,7 @@ Has both GET and POST routes for retrieving and adding new data.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./public/IMG/deployed_comfyreads.png)
 
 ### Links
 
