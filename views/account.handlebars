@@ -1,63 +1,19 @@
-
-<section class="form my-4 mx-5">
-  <div class="container">
-    <div class="row no-gutters">
-      <div class="col-lg-5">
-        <img src="./IMG/Library.jpg" class="img-fluid" alt="">
-      </div>
-      <form class = "checkout-form">
-        <div class="col-lg-7 px-5 pt-5">
-          <h1 class="font-weight-bold py-3">Shopping Cart </h1>
-          <label for="bookid">Book ID:</label>
-          <input type="text" id="book-id" name="bookid" required>
-
-          <label for="borrower">Borrower Name:</label>
-          <input type="text" id="borrower-name" name="borrower" required>
-{{!-- 
-          <label for="dueDate">Due Date:</label>
-          <input type="date" id="date-return" name="dueDate" required> --}}
-
-          <button type="submit">Checkout</button>
-        </div>
-      </form>
-    </div>
-</section>
-<script src="/js/checkout.js"></script>
-{{!-- <section class="form my-4 mx-5">
-  <div class="container">
-    <div class="row no-gutters">
-      <div class="col-lg-5">
-        <img src="./IMG/Library.jpg" class="img-fluid" alt="">
-      </div>
-      <div class="col-lg-7 px-5 pt-5">
-        <h1 class="font-weight-bold py-3">Comfy Reads</h1>
-        <form class="login-form">
-          <div class="form-row">
-            <div class="col-lg-7">
-              <input type="email" placeholder="Email-Address" id="email-login" class="form-control my-3 p-4"></input>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-lg-7">
-              <input type="password" placeholder="********" id="password-login" class="form-control my-3 p-4"></input>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-lg-7">
-              <button type="submit" class="btn1 mt-3 mb-5">Login</button>
-            </div>
-          </div>
-          <p>Don't have an account? <a href="/signup">Register here</a></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section> --}}
 <div>
-    This is the account page
-    checkout out books:
-    {{#each checkedOutBook}}
-        {{this}}
+  <h2>User Account</h2>
+  <p>User ID: {{userId}}</p>
+  <p>Name: {{name}}</p>
+  <p>Email: {{email}}</p>
+  <p>Phone Number: {{phoneNumber}}</p>
+  <p>Address: {{address}}</p>
+  <p>Books Checked Out:</p>
+  <ul>
+    {{#each bookarr as |book|}}
+      <li>{{book.id}} - {{book.title}} (Due Date: {{dueDate}})</li>
     {{/each}}
+  </ul>
+  <style>
+body {
+  background-color: tan;
+}
 </div>
-
+<script src="/js/checkout.js"></script>
