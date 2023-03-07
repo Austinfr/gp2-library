@@ -10,8 +10,7 @@ router.get('/', withAuth, async (req, res) => {
                 borrowed_by: currentUser.id
             }
         });
-        
-        res.render('account');
+        res.render('account', checkedOutBooks);
     }catch(err){
         res.render(err);
     }

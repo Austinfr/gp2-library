@@ -11,9 +11,11 @@ router.get('/', async (req, res) => {
 
 router.get('/:name', async (req, res) => {
     try{
-      const bookList = bookSearch.getBookListBySearch(req.params.name);
-      console.log(bookList);
-      res.render('results', bookList);
+      //this will get the result of the request giving the title an author but does not redirect or display
+      await bookSearch.getBookListBySearch(req.params.name, 20).then(result => {
+        res.render('results', result);
+      });
+      
 
     } catch(err){
         res.status(500).json({message: err});

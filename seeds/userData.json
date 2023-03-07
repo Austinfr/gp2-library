@@ -10,10 +10,10 @@
       "password": "password12345"
     }, 
     {
-        "name": "Lily",
-        "email": "lily@gmail.com",
-        "password": "password12345"
-      },
+      "name": "Lily",
+      "email": "lily@gmail.com",
+      "password": "password12345"
+    },
     {
       "name": "Kevin",
       "email": "kevin@hotmail.com",
