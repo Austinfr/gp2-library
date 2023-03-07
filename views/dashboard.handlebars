@@ -1,22 +1,37 @@
-
+<link rel="stylesheet" href="public/css/dashboard.css">
 <h1>Library Dashboard</h1>
 {{log books}}
 {{!-- {{log bookarr}} --}}
-{{!-- <table>
-  <thead>
-  <tbody>
-    <tr>
-      {{#each bookarr as |book|}}
+
+<body>
+  <div class="slide-container">
+    <div class="slide-content">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class ="card-image"></div>
+
+            <img src="" alt="" class="card-img">
+          </div>
+        </div>
+             {{#each bookarr as |book|}}
       <div class="book">
         <h2>{{book.title}}</h2>
         <p>{{book.author}}</p>
         <p>{{book.description}}</p>
+        <button class="button">checkout</button>
       </div>
       {{/each}}
-    </tr>
-  </tbody>
-  </thead>
-</table> --}}
+      </div>
+  </div>
+  </div>
+
+
+
+</body>
+<script src="/js/dashboard.js"></script>
+
 
 
 
@@ -64,3 +79,4 @@
   }
   
 </style>
+
