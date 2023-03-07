@@ -45,4 +45,4 @@ const checkoutFormHandler = async (event) => {
   }
 };
 
-document.querySelector('.checkout-form').addEventListener('submit', checkoutFormHandler);
+// document.querySelector('#checkout').addEventListener('submit', checkoutFormHandler);

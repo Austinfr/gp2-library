@@ -27,7 +27,7 @@ router.post('/:id/checkout', async (req, res) => {
             }
         });
 
-        res.redirect('search', { message: 'The book has been checked out successfully.' });
+        res.redirect('/account', { message: 'The book has been checked out successfully.' });
     } catch (err) {
         res.status(500).send({ message: err });
     }
