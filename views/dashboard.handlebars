@@ -1,39 +1,31 @@
-<link rel="stylesheet" href="public/css/dashboard.css">
+{{!-- <link rel="stylesheet" href="public/css/dashboard.css">
 <h1>Library Dashboard</h1>
-{{log books}}
+{{log books}} --}}
 {{!-- {{log bookarr}} --}}
 
-<body>
-  <div class="slide-container">
-    <div class="slide-content">
-      <div class="card-wrapper">
-        <div class="card">
-          <div class="image-content">
-            <span class="overlay"></span>
-            <div class ="card-image"></div>
-
-            <img src="" alt="" class="card-img">
-          </div>
-        </div>
-             {{#each bookarr as |book|}}
-      <div class="book">
-        <h2>{{book.title}}</h2>
-        <p>{{book.author}}</p>
-        <p>{{book.description}}</p>
-        <button class="button">checkout</button>
-      </div>
-      {{/each}}
-      </div>
+{{!-- <body>
+  <div class="book-container">
+    {{#each bookarr as |book|}}
+    <div class="book-card">
+      <h2>{{book.title}}</h2>
+      <p class="author">{{book.author}}</p>
+      <p class="description">{{book.description}}</p>
+    </div>
+    {{/each}}
+  
+  <button class="button">checkout</button>
   </div>
+  {{/each}}
   </div>
-
+ 
 
 
 </body>
-<script src="/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script> --}}
 
 
 
+<!-- index.html -->
 
 <div class="book-container">
   {{#each bookarr as |book|}}
@@ -44,39 +36,39 @@
   </div>
   {{/each}}
 </div>
+<script src="/js/dashboard.js"></script>
+
 
 <style>
-  .book-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+ .book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  .book-card {
-	background-color: #ffffff;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-	margin: 10px;
-	padding: 20px;
-	width: 300px;
-  }
-  
-  .book-card h2 {
-	font-size: 24px;
-	margin-bottom: 10px;
-  }
-  
-  .book-card p.author {
-	font-size: 18px;
-	font-style: italic;
-	margin-bottom: 10px;
-  }
-  
-  .book-card p.description {
-	font-size: 16px;
-	margin-bottom: 10px;
-  }
-  
-</style>
 
+  .book-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+  }
+
+  .book-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .book-card p.author {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .book-card p.description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  } 
+  </style>
