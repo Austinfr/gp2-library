@@ -12,7 +12,7 @@ Comfy reads in an online digital library that allows users to create an account 
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+- [Our process](#out-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -43,6 +43,7 @@ Has both GET and POST routes for retrieving and adding new data.
 ## Our process
 
 ### Built with
+
 - Passport.js
 - Handlebars.js
 - less.js
@@ -73,8 +74,10 @@ Connecting our pages and back end to Handlebars pages and having the user be abl
 
 ## APIs used:
 
-// our database api
+
+our database api
 Library_db 
+
 		
 ## new Tech:
 
