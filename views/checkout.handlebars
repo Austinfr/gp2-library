@@ -1,4 +1,4 @@
-<div class='menu-container'>
+{{!-- <div class='menu-container'>
   <div class='card-header col-md-10'>
     <h2>
       &#127869 Current Library
@@ -59,4 +59,61 @@
 {{!-- ADDED JS --}}
 
 
-<script src='/js/></script>
+<script src='/js/></script> --}}
+
+
+
+<div class='checkout-form'>
+  <div class='card-header col-md-10'>
+    <h2>
+      &#127869; Current Library
+    </h2>
+  </div>
+  {{#each bookarr as |book|}}
+    <div class='book col-md-5'>
+      <p>
+        {{book.id}}.
+        {{book.book_name}}
+      </p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        Name:
+        {{book.user_name}}
+      </p>
+    </div>
+  {{/each}}
+  <div class='add-book-container'>
+    <h2>
+      Save your book!
+    </h2>
+    <form class='new-book-form'>
+      <label for='book_name'>
+        Book Name:
+      </label>
+      <br />
+      <input type='text' id='book_name' name='book_name' value='{{book_name}}'>
+      <br />
+      <label for='description'>
+        Description:
+      </label>
+      <br />
+      <textarea id='description' name='description' rows='5' cols='30'>
+        {{description}}
+      </textarea>
+      <br />
+      <label for='user_name'>
+        User Name:
+      </label>
+      <br />
+      <input type='text' id='user_name' name='user_name' value='{{user_name}}'>
+      <br />
+      <br />
+      <button type='submit'>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
