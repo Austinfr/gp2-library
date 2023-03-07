@@ -3,7 +3,7 @@
 {{log books}}
 {{!-- {{log bookarr}} --}}
 
-<body>
+{{!-- <body>
   <div class="slide-container">
     <div class="slide-content">
       <div class="card-wrapper">
@@ -30,10 +30,10 @@
 
 
 </body>
-<script src="/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script> --}}
 
 
-
+<body>
 
 <div class="book-container">
   {{#each bookarr as |book|}}
@@ -41,10 +41,11 @@
     <h2>{{book.title}}</h2>
     <p class="author">{{book.author}}</p>
     <p class="description">{{book.description}}</p>
+    <button class="button">checkout</button>
   </div>
   {{/each}}
 </div>
-
+</body>
 <style>
   .book-container {
 	display: flex;
