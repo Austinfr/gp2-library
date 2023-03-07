@@ -43,8 +43,7 @@ Has both GET and POST routes for retrieving and adding new data.
 ## Our process
 
 ### Built with
-
-- Google Books API
+- Passport.js
 - Handlebars.js
 - less.js
 - MySQL
@@ -60,21 +59,27 @@ Connecting our pages and back end to Handlebars pages and having the user be abl
 - Allow users to create a wishlist.
 
 ## Authors
-  Austin Howell, Thuy Bui, Kevin l, Lilly Ruiz
+  Austin Howell, Thuy Bui, Kevin Lang, Lilly Ruiz
+  
 - Website - [your name or website url](https://www.your-site.com)
+- 
 - GitHubs - [Austinfr](https://github.com/Austinfr)
+- 
 [tweetwee1810](https://github.com/tweetwee1810)
+
 [kavin1206](https://github.com/kevinl206)
+
 [LillyRWonka](https://github.com/LillyRWonka)
 
 ## APIs used:
 
-- https://openlibrary.org/dev/docs/api/books
-- https://developers.google.com/books/
+// our database api
+Library_db 
 		
 ## new Tech:
 
 - https://www.passportjs.org/
+- 
 - https://github.com/less/less.js
 	
 ## Repo:
