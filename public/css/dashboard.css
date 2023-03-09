@@ -45,9 +45,10 @@ background-color: tan;
 
 }
 
-
-
-  /* .book-container {
+body {
+  background-color: tan;
+}
+ .book-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -77,4 +78,5 @@ background-color: tan;
   .book-card p.description {
     font-size: 16px;
     margin-bottom: 10px;
-  } */
+  } 
+

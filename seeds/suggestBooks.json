@@ -4,57 +4,66 @@
         "title": "Fahrenheit 451",
         "author": "Ray Bradbury",
         "description": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. Often regarded as one of his best works, the novel presents a future American society where books are outlawed and \"firemen\" burn any that are found. The book's tagline explains the title as \"'the temperature at which book paper catches fire, and burns\": the autoignition temperature of paper. The lead character, Guy Montag, is a fireman who becomes disillusioned with his role of censoring literature and destroying knowledge, eventually quitting his job and committing himself to the preservation of literary and cultural writings.",
-        "image": "https://covers.openlibrary.org/b/id/12993656-L.jpg"
+        "image": "https://covers.openlibrary.org/b/id/12993656-L.jpg",
+        "ISBN": 9780735667457
+        
     },
     {
         "title": "Full Dark, No Stars",
         "author": "Stephen King",
         "description": "\"Full Dark, No Stars\" is a collection of four novellas by Stephen King that delve into the darker side of human nature. The stories explore themes such as murder, revenge, deals with the devil, and the consequences of discovering dark secrets. With its gripping plots and well-drawn characters, this collection is a must-read for fans of horror and suspense.",
-        "borrowed_by": 1
+        "ISBN": 9781939924356
+        
     },
     {
         "title": "A Dog's Purpose",
         "author": "W. Bruce Cameron",
         "description": "Searching for his purpose over the course of multiple canine lives, Bailey is reborn as a golden-haired puppy after a tragic death as a stray and shares a loving bond with young Ethan before he again dies and starts over.",
         "image": "https://covers.openlibrary.org/b/id/8750145-L.jpg",
-        "borrowed_by": 3
+        "ISBN": 9780062294449
+       
     },
     {
         "title": "The Adventure of Sherlock Holmes",
         "author": "Arthur Conan Doyle",
-        "description": "The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892. The stories are collected in the same sequence, which is not supported by any fictional chronology. The only characters common to all twelve are Holmes and Dr. Watson and all are related in first-person narrative from Watson's point of view.."
+        "description": "The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892. The stories are collected in the same sequence, which is not supported by any fictional chronology. The only characters common to all twelve are Holmes and Dr. Watson and all are related in first-person narrative from Watson's point of view..",
+        "ISBN": 9780062251466
     },
     {
         "title": "Looking for Alaska",
         "author": "John Green",
         "description": "Before. Miles \"Pudge\" Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave \"the Great Perhaps\" even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then After. Nothing is ever the same.",
         "image": "https://covers.openlibrary.org/b/id/12614602-L.jpg",
-        "borrowed_by": 2
+        "ISBN": 9780804136798
     },
     {
         "title": "Paper Towns",
         "author": "John Green",
-        "description": "One month before graduating from his Central Florida high school, Quentin \"Q\" Jacobsen basks in the predictable boringness of his life until the beautiful and exciting Margo Roth Spiegelman, Q's neighbor and classmate, takes him on a midnight adventure and then mysteriously disappears."
+        "description": "One month before graduating from his Central Florida high school, Quentin \"Q\" Jacobsen basks in the predictable boringness of his life until the beautiful and exciting Margo Roth Spiegelman, Q's neighbor and classmate, takes him on a midnight adventure and then mysteriously disappears.",
+        "ISBN": 9780307887763
     },
     {
         "title": "The Green Mile",
         "author": "Stephen King",
         "description": "When it first appeared, one volume per month, Stephen King's THE GREEN MILE was an unprecedented publishing triumph: all six volumes ended up on the New York Times bestseller lists—simultaneously—and delighted millions of fans the world over.",
-        "borrowed_by": 4
+        "ISBN": 9781408195129
     },
     {
         "title": "Wonder",
         "author": "R. J. Palacio",
-        "description": "Ten-year-old Auggie Pullman, who was born with extreme facial abnormalities and was not expected to survive, goes from being home-schooled to entering fifth grade at a private middle school in Manhattan, which entails enduring the taunting and fear of his classmates as he struggles to be seen as just another student."
+        "description": "Ten-year-old Auggie Pullman, who was born with extreme facial abnormalities and was not expected to survive, goes from being home-schooled to entering fifth grade at a private middle school in Manhattan, which entails enduring the taunting and fear of his classmates as he struggles to be seen as just another student.",
+        "ISBN": 9780446578987
     },
     {
         "title": "Thinking, Fast and Slow",
         "author": "Daniel Kahneman",
-        "description": "Kahneman introduces two modes of thought - system 1, fast and intuitive, and system 2, slow and reasoned - and explores how these modes effect behavior, particularly judgement and decision making."
+        "description": "Kahneman introduces two modes of thought - system 1, fast and intuitive, and system 2, slow and reasoned - and explores how these modes effect behavior, particularly judgement and decision making.",
+        "ISBN": 9781101979837
     },
     {
         "title": "The Summer I Turned Pretty Trilogy",
         "author": "Jenny Han",
-        "description": "Belly has always lived for the summertime, because summer means all her favorite things: swimming, the beach, and the Fischer boys, Conrad and Jeremiah. For as long as she can remember, she's shared her summers with the brothers at Cousins Beach. And for as long as she can remember, she's been in love with Conrad. Then one summer it seems like he might have feelings for her too -- but so does Jeremiah. As the summer seasons pass, Belly has to choose between two brothers who love her ... and she'll have to break one of their hearts."
+        "description": "Belly has always lived for the summertime, because summer means all her favorite things: swimming, the beach, and the Fischer boys, Conrad and Jeremiah. For as long as she can remember, she's shared her summers with the brothers at Cousins Beach. And for as long as she can remember, she's been in love with Conrad. Then one summer it seems like he might have feelings for her too -- but so does Jeremiah. As the summer seasons pass, Belly has to choose between two brothers who love her ... and she'll have to break one of their hearts.",
+        "ISBN": 9781101979834
     }
 ]
