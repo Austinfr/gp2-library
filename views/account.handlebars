@@ -1,16 +1,11 @@
-<div>
+<link rel="stylesheet" type="text/css" href="css/checkout.css">
+<div class="user-card">
   <h2>User Account</h2>
   <p>User ID: {{session.user_id}}</p>
   <p>Name: {{session.user_name}}</p>
   <p>Email: {{session.user_email}}</p>
-  
-  {{!-- <p>Phone Number: {{phoneNumber}}</p> --}}
-  {{!-- <p>Books Checked Out:</p> --}}
-  <ul>
-    {{#each bookarr as |book|}}
-      <p>Book Checkout: {{book.title}}</p>
-    {{/each}}
-  </ul>
+
+
+  <script src="/js/checkout.js"></script>
 </div>
-<script src="/js/checkout.js"></script>
 
